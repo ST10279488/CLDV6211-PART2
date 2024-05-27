@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @model Order
+
+
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<h2>Order Confirmation</h2>
+
+<div>
+    <p>Order ID: @Model.OrderId</p>
+    <p>User: @Model.User.Name</p>
+    <p>Order Date: @Model.OrderDate</p>
+</div>
+
+}

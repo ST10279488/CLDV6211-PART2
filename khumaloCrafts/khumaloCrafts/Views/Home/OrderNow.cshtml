@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+   
+   
+    ViewData["Title"] = "Order";
+}
+
+<div class="container">
+    <h1>Order Now</h1>
+    <p>Thank you for your interest in our handcrafted products! Please fill out the form below to place your order.</p>
+
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="mb-3">
+            <label for="product" class="form-label">Product</label>
+            <input type="text" class="form-control" id="product" value="@Context.Request.Query["item"]" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price (R)</label>
+            <input type="text" class="form-control" id="price" value="@Context.Request.Query["price"]" readonly>
+        </div>
+        <div class="mb-3">
+            <label for="quantity" class="form-label">Quantity</label>
+            <input type="number" class="form-control" id="quantity" placeholder="Enter quantity">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Shipping Address</label>
+            <textarea class="form-control" id="address" rows="3" placeholder="Enter your shipping address"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="background-color: black;">Submit Order</button>
+    </form>
+</div>
+
